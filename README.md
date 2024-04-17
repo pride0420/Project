@@ -15,7 +15,7 @@ Languages/Standards/Concepts:
 -	Java (J2SE, J2EE)
 -	JavaScript、Ajax、jQuery
 -	SQL、XML
--	Mybatis、Spring boot
+-	Mybatis、Spring boot<br>
 Software/Environment:
 -	Tomcat
 -	MySQL
