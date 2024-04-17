@@ -1,0 +1,22 @@
+.table{
+    width: 700px;
+    margin-bottom: 0px; /* 設置間距為20像素 */
+}
+.Box{
+    background-color: rgb(235, 158, 129);
+    position: relative;
+    margin-top: 2%;
+}
+.button{
+    
+    margin-bottom: 1%;
+    display: block;
+}
+.button button{
+    margin: 0 auto;
+    display: block;
+}
+.errrorMag{
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,30 @@
+.table{
+    width: 700px;
+    margin-bottom: 0px; /* 設置間距為20像素 */
+    border-collapse: collapse; /* 消除表格边框间距 */
+}
+body{
+    background-color: rgb(235, 158, 129);
+}
+.chatBox{
+    background-color: rgb(235, 158, 129);
+    position: relative;
+    margin-top: 2%;
+}
+.comment{
+    height: 100px;
+}
+
+.flex-content{
+    display: flex;
+    justify-content: space-between; /* 讓子元素盡可能分散排列，左右對齊 */
+}
+.button-left{
+    margin-right: 10px;
+}
+.button-right{
+    margin-right: 10px;
+}
+.content{
+    margin-right: 10px;
+}

@@ -1,0 +1,51 @@
+.butoon-shop{
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+  }
+  .butoon-shop button {
+    margin: 5px; /* 为按钮添加间距 */
+}
+.list-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .list-item {
+    display: flex;
+    margin: 20px; /* 为每个项目添加一些间隔 */
+  }
+
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直居中对齐 */
+    text-align: center; /* 水平居中对齐 */
+  }
+  
+  .item-image {
+    width: auto; /* 设置图片宽度为50% */
+    height: 250px;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  /* hover 伪類選擇器 鼠標停在container上可以選擇info的樣式 */
+  .image-container:hover .image-info {
+    display: block;
+  }
+  /* display:none 一開始隱藏  當屬標移到該物件時顯示*/
+  .image-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    display: none;
+  }
+  .flex-button{
+    display: flex;
+    justify-content: center;
+  }

@@ -1,0 +1,10 @@
+.image-column img {
+    display: block;
+    width: 200%; /* 设置图片列的宽度 */
+    height: auto;
+    vertical-align: top; /* 将内容对齐到顶部 */
+}
+
+.content-column {
+    padding-left: 150px; /* 设置内容列的左边距，与图片列相隔一定距离 */
+}

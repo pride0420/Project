@@ -1,0 +1,82 @@
+.title {
+    color: #e6220c;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.item {
+    margin-bottom: 30px;
+}
+
+.item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    height: 50px;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 20px;
+}
+.shop-con {
+    display: flex;
+    justify-content: space-between; /* 左右对齐 */
+    align-items: center; /* 垂直居中 */
+  }
+  .right {
+    color: #f30808;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+   }
+
+
+   .list-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-item {
+    display: flex;
+    margin: 20px; /* 为每个项目添加一些间隔 */
+  }
+
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直居中对齐 */
+    text-align: center; /* 水平居中对齐 */
+  }
+  
+  .item-image {
+    width: auto; /* 设置图片宽度为50% */
+    height: 250px;
+  }
+  .shoop{
+    text-align: center;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container:hover .image-info {
+    display: block;
+  }
+  
+  .image-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    display: none;
+  }
