@@ -1,4 +1,4 @@
-個人作品內容: 
+個人作品內容: <br>
 專案採用前後端分離，後端 Spring boot+Mybatis 使用eclipse開發，前端React+css 使用VsCode開發，資料庫MySQL，使用Security+Jwt進行身分驗證，並在Docker上測試。<br>
 <br>
 專案內容:<br>
