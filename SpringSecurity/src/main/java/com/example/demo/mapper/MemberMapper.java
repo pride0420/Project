@@ -56,6 +56,7 @@ public interface MemberMapper {
 	
 	@Select("select * from member where username=#{username} and email=#{email}")
 	Member queryUserAndEmailTest(Member m);
+	
 	/**
 	 * 更新帳號
 	 * @param m

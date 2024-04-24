@@ -18,6 +18,8 @@ public interface MemberService {
 	
 	List<Member> queryAllMember();
 	
+	List<Member> queryOnlyUser();
+	
 	void deleteMember(Integer memberId);
 	
 }

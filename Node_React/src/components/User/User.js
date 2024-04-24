@@ -10,7 +10,7 @@ export default function User() {
     const {member}=useContext(MemberContext);
     const token=member.accessToken;
     const [errorMag,setErrorMag]=useState(null);
-
+    const role=member.role;
 
 // 设置响应拦截器
 axios.interceptors.response.use(
@@ -111,18 +111,23 @@ axios.interceptors.response.use(
     <>
        <Navibar />
             <img src="image/05.jpg" className="img-responsive" id="banner" alt="" />
+            {role==="admin"?( 
+              <div className='Box'>
+                <div className='button'>
+                  <button onClick={download}>匯出(excel)</button>
+                  <button onClick={() => downJasp("pdf")}>匯出(jasper pdf)</button>
+                  <button onClick={() => downJasp("xlsx")}>匯出(jasper xlsx)</button>
+                </div>
+              </div>):(
+              <div className='Box'></div>
+            )}
             {errorMag!==null?(<div className='errrorMag'>{errorMag}</div>) :(
-        <div className='Box'>
-            <div className='button'>
-                <button onClick={download}>匯出(excel)</button>
-                <button onClick={() => downJasp("pdf")}>匯出(jasper pdf)</button>
-                <button onClick={() => downJasp("xlsx")}>匯出(jasper xlsx)</button>
-            </div>
+           <>
             {memberList&&memberList.map((memberInfo)=>(<UserList key={memberInfo.memberId} memberInfo={memberInfo}/>))}
-        </div>
-         )}
+           </>
+            )}
         <Footer/>
-   
+  
     </>
   )
 }

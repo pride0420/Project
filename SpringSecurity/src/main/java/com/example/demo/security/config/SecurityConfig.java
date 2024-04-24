@@ -33,8 +33,7 @@ public class SecurityConfig {
 		http.authorizeHttpRequests(registry->
 		registry
 		//hasAnyAuthority(admin)任何帶有admin的都可使用  hasAuthority(admin,user)需同時具備這些地才能使用
-		.requestMatchers(HttpMethod.GET,"/member/queryAll").hasAnyAuthority ("admin")
-		.requestMatchers(HttpMethod.GET,"/member/queryUser").hasAnyAuthority ("admin","user")
+		.requestMatchers(HttpMethod.GET,"/member/queryAll").hasAnyAuthority ("admin","user")
 		.requestMatchers(HttpMethod.GET, 
 				"/member/**","/member/*","/chat/*","/car/*",
 				"/comment/*","/shop/*","/porder/*").permitAll()

@@ -63,15 +63,24 @@ public interface MemberMapper {
 	@Select("select * from member where username=#{username}")
 	Member queryMemberUsername(String username);
 	
-	@Select("select * from member where username=#{username} and email=#{email}")
-	Member queryUserAndEmailTest(Member m);
+	/**
+	 * 指查詢帳號
+	 * @return
+	 */
+	@Select("select username from member")
+	List<Member> queryOnlyUser();
+	
+	
 	/**
 	 * 更新帳號
 	 * @param m
 	 */
 	@Update("update member set name=#{name},phone=#{phone},email=#{email} where memberId=#{memberId}")
 	void updateMember(Member m);
-	
+	/**
+	 * 更新密碼
+	 * @param m
+	 */
 	@Update("update member set password=#{password} where memberId=#{memberId}")
 	void updatePassword(Member m);
 

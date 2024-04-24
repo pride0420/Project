@@ -78,12 +78,12 @@ public class MemberController {
 	@GetMapping("queryAll")
 	public ResponseEntity<?> queryAllMember() {
 	    Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-	    if (authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("admin"))) {
-	        // 验证成功，返回用户信息或其他相关数据
-	        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-	        // 在这里构建包含用户信息的 JSON 对象，并返回
-	        return ResponseEntity.ok(userDetails);
-	    } else {
+	    if (authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("admin"))) { 
+	        return ResponseEntity.ok("admin");
+	    }else if(authentication != null && authentication.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("user"))) {
+	    	return ResponseEntity.ok("user");
+	    }
+	    else {
 	        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
 	    }
 	}

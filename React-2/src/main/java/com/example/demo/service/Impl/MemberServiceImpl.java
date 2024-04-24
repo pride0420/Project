@@ -79,4 +79,10 @@ public class MemberServiceImpl implements MemberService {
 		return l;
 	}
 	
+	@Override
+	public List<Member> queryOnlyUser() {
+		List<Member> m=mm.queryOnlyUser();
+		return m;
+	}
+	
 }
